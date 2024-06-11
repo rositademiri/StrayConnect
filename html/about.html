@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>About StrayConnect</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <link rel=" stylesheet" href="../css/StrayConnect.css" />
+    <link rel=" stylesheet" href="../css/media-query1.css" />
+    <link rel=" stylesheet" href="../css/media-query2.css" />
+    <link rel=" stylesheet" href="../css/media-query3.css" />
+    <link rel=" stylesheet" href="../css/media-query4.css" />
+    <script src="../js/font_awesome.js"></script>
+</head>
+<body>
+    <header>
+        <!--duke klikuar ne elementet qe ndodhen ne nav(navigation)mund te shkojme te faqja e specifikuar me ane te nje linku-->
+        <nav class="topnav" id="myTopnav">
+            <a id="logo">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                StrayConnect
+            </a>
+            <a href="home.html" class="hover">
+                <i class="fa-solid fa-house">&nbsp;</i>
+                Home
+            </a>
+            <a href="about.html" class="active hover">
+                <i class="fa-solid fa-magnifying-glass">&nbsp;</i>
+                About us
+            </a>
+            <a href="pets.html" class="hover">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                Pets
+            </a>
+            <a href="adopt.html" class="hover">
+                <i class="fa-solid fa-gift">&nbsp;</i>
+                Adoption
+            </a>
+            <a href="tips.html" class="hover">
+                <i class="fa-solid fa-pen">&nbsp;</i>
+                Tips
+            </a>
+            <a href="contact.html" class="hover">
+                <i class="fa-solid fa-phone">&nbsp;</i>
+                Contact
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <!--seksioni qe jep informacion te detajuar rreth cfare permban website-i-->
+        <!--ne nje nga elementet e flex ndodhen paragrafet shpjegues dhe ne tjetrin nje imazh-->
+        <section id="about-section1" class="d-flex ml-5 col-gap-10 mt-15">
+            <div class="w-50">
+                <h1 class="font-2-5rem m-0">Our Goal</h1>
+                <hr class="border-style-dashed" />
+                <p class="text-indent-30px mt-7 font-18px">
+                    This site serves as a platform for information and discussion on a variety of topics, including but 
+                    not limited to pet adoption, animal welfare, and compassionate living. Users can ask questions, ask for advice.
+                    Additionally, the website provides resources, such as articles, guides and stories, to educate and inspire individuals 
+                    interested in adopting stray pets or supporting animal welfare causes.
+                </p>
+                <p class="text-indent-30px font-18px">
+                    Whether you are a potential pet owner looking to adopt, an animal advocate looking for ways to make a positive impact, 
+                    or simply someone interested in learning more about the joys and responsibilities of pet ownership, this website aims 
+                    to provide valuable insight and support.
+                 </p>
+            </div>
+            <div class="w-50">
+                <img src="../img/about/about-photo1.webp" alt="courious-cat-photo" class="w-90 bevel-polygon" />
+            </div>
+        </section>
+        <!--seksioni qe jep informacion rreth idese se si nisi website-i-->
+        <!--ne nje nga elementet e flex(ne te majte) ndodhet imazhi  dhe ne tjetrin(ne te djathte te ekranit) shfaqen paragrafet shpjegues-->
+        <section id="text-wrap" class="d-flex ml-5 col-gap-10 mt-20">
+            <div class="w-50">
+                <img src="../img/about/about-photo2.avif" alt="courious-dog-photo" class="w-90 bevel-polygon" />
+            </div>
+            <div class="w-50 mr-5">
+                <h1 class="font-2-5rem m-0">How it started...</h1>
+                <hr class="border-style-dashed" />
+                <p class="text-indent-30px mt-7 font-18px">
+                    In a bustling city, Lisa, a girl fond of animals, often noticed animals wandering the streets.
+                    Driven by compassion, she turned to her friend, Alex, a web developer, with an idea.
+                </p>
+                <p class="text-indent-30px font-18px">
+                    Pooling their skills and resources, they created StrayConnect, a website that connects homeless pets with adoptive families. 
+                    Partnering with local shelters, they built a platform where users could browse profiles, arrange meetings and facilitate adoptions.
+                </p>
+                <p class="text-indent-30px font-18px">
+                    Their simple idea blossomed into a community-driven initiative, uniting countless stray pets with caring homes. 
+                    StrayConnect continues to thrive, fueled by the belief that every animal deserves love and safety.
+                </p>
+            </div>
+        </section>
+        <!--seksioni qe jep informacion rreth arsyes se funksionimit te ketij website-i-->
+        <section id="about-section3" class="mt-20">
+            <h1 class="ml-5 font-2-5rem"> Why this initiative?</h1>
+            <hr class="border-style-dashed" />
+            <!--ne nje flex ndodhen tre elemente dy prej tyre permbajne ul(lista te paradhitura) dhe njeri permban imazh-->
+            <div class="d-flex col-gap-5 ml-5 mt-3">
+                <div class="w-25">
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                            <b>To rescue: </b> <br />Stray animals often face dangers such as starvation, disease and injury. 
+                            By adopting them, we save ourselves from these threats.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                            <b>Responsibility: </b><br />We recognize our role in caring for and protecting the needy creatures in our community.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                            <b>Bonding: </b><br />Adopting a pet fosters a deep bond between human and animal, enriching both lives and creating lasting companionship.
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-30">
+                    <img src="../img/about/about-photo5.jpg" alt="vet with animals photo" class="w-100 border-rad-100" />
+                </div>
+                <div class="w-25">
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                            <b>Compassion:</b><br />We empathize with animals in need and want to alleviate their suffering.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                            <b>Values: </b> <br />We do this because it aligns with our values of kindness, empathy and belief 
+                            that every life, whether human or animal, is worthy of love and respect.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                            <b>Second Chances: </b> <br />Every animal deserves a chance at a happy and fulfilling life, 
+                            regardless of their past circumstances.
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--seksioni qe flet perse kerkojme bashkepunim dhe ndihme nga personat qe jane duke naviguar ne kete website-->
+        <section id="about-section4">
+            <h1 class="mt-20 align-center font-2-5rem">Why we ask for your help</h1>
+            <div class="d-flex pb-10">
+                <!--ne nje flex ndodhen tre elemente dy prej tyre permbajne imazhe dhe njeri permban paragraf-->
+                <div class="mr-5 ml-5 w-100">
+                    <img src="../img/about/about-photo3.jpg" alt="dog-human-hand photo" class="w-100 right-polygon" />
+                    <div class="mt-3 ml-28">
+                        <a href="pets.html" class="link-about">Animal profiles</a>
+                    </div>
+                </div>
+                <p id="about-help" class="w-50 h-50">
+                    By participating in pet adoption initiatives, we contribute to building a compassionate and supportive 
+                    community that values the well-being of all its members, people and animals alike.
+                </p>
+                <div class="mr-5 ml-5 w-100">
+                    <img src="../img/about/about-photo4.webp" alt="cat-human-hand photo" class="w-100 left-polygon" />
+                    <div class="mt-3 ml-42">
+                        <a href="adopt.html" class="link-about">Adopt now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="d-flex">
+        <!--flex i perbere nga kater element te vendosur horizontalisht-->
+        <!--Logo-->
+        <div class="w-25">
+            <h2 class="font-2-5rem mt-15">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                <span>StrayConnect</span>
+            </h2>
+        </div>
+        <!--Adresa-->
+        <div class="w-25">
+            <i class="fa-solid fa-location-dot font-2rem"></i>
+            <h2>Address</h2>
+            <span class="color-white font-weight-bold">
+                Zona 13, Rruga Kavajës,<br />
+                XXX, Tirana 305,<br />
+                Albania
+            </span>
+        </div>
+        <!--Kontaktet-->
+        <div class="w-25">
+            <i class="fa-solid fa-phone font-2rem"></i>
+            <h2>Contacts</h2>
+            <!--ne momentin qe klikohet numri i telefonit i shfaqur ne ekran ateher telefonohet numri qe ndodhet brenda href-->
+            <a href="tel:123-456-7890" class="text-decor-none color-white font-weight-bold">123-456-7890</a><br /><br />
+            <!--ne momentin qe klikohet nje nga email-et e shfaqura ne ekran ateher hapet faqja e email per te derguar nje mesazh ne adresen qe eshte klikuar-->
+            <a target="_blank" href="mailto:myemail@gmail.com" class="text-decor-none color-white font-weight-bold">
+                myemail@gmail.com<br />
+                myemail2@gmail.com
+            </a>
+        </div>
+        <!--Oret kur jemi aktiv-->
+        <div class="w-25">
+            <i class="fa-regular fa-clock font-2rem"></i>
+            <h2>Opening hours</h2>
+            <span class="color-white font-weight-bold">
+                Monday - Friday: 8:00 - 22:00<br />
+                Saturday: 8:00 - 23:00
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/StrayConnect.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <title>Contact StrayConnect</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <link rel=" stylesheet" href="../css/media-query1.css" />
+    <link rel=" stylesheet" href="../css/media-query2.css" />
+    <link rel=" stylesheet" href="../css/media-query3.css" />
+    <link rel=" stylesheet" href="../css/media-query4.css" />
+    <link rel=" stylesheet" href="../css/StrayConnect.css" />
+    <script src="../js/font_awesome.js"></script>
+</head>
+<body>
+    <header id="contact-header">
+        <!--duke klikuar ne elementet qe ndodhen ne nav(navigation)mund te shkojme te faqja e specifikuar me ane te nje linku-->
+        <nav class="topnav" id="myTopnav">
+            <a id="logo">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                StrayConnect
+            </a>
+            <a href="home.html" class="hover">
+                <i class="fa-solid fa-house">&nbsp;</i>
+               Home
+            </a>
+            <a href="about.html" class="hover">
+                <i class="fa-solid fa-magnifying-glass">&nbsp;</i>
+                About us
+            </a>
+            <a href="pets.html" class="hover">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                Pets
+            </a>
+            <a href="adopt.html" class="hover">
+                <i class="fa-solid fa-gift">&nbsp;</i>
+                Adoption
+            </a>
+            <a href="tips.html" class="hover">
+                <i class="fa-solid fa-pen">&nbsp;</i>
+                Tips
+            </a>
+            <a href="contact.html" class="active hover">
+                <i class="fa-solid fa-phone">&nbsp;</i>
+                Contact
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="bg-img-contact">
+            <!--brenda div ndodhet formulari-->
+            <!--atributi required ben qe ky formular te mos dergohet ne qofte se inputi eshte bosh-->
+            <form class="form-container" method="POST" enctype="multipart/form-data" style="margin-top:100px;">
+                <h2>CONTACT US</h2>
+                <br>
+                <!--ne kete input duhet vendosur emri i personit qe po ploteson kete formular-->
+                <label for="emri"> NAME: </label><br>
+                <input type="text" id="emri" name="emri" placeholder="Enter your name..." required>
+                <br><br>
+                <!--ne kete input duhet vendosur mbiemri i personit qe po ploteson kete formular-->
+                <label for="mbiemri"> LAST NAME: </label><br>
+                <input type="text" id="mbiemri" name="mbiemri" placeholder="Enter your last name..." required>
+                <br><br>
+                <!--ne kete input duhet vendosur mbiemri i personit qe po ploteson kete formular-->
+                <label>GENDER:</label> <br> <br>
+
+                <input type="radio" id="mashkull" name="gjinia" value="mashkull">
+                <label for="mashkull">Male</label>
+                <input type="radio" id="femer" name="gjinia" value="femer">
+                <label for="femer">Female</label>
+                <input type="radio" id="tjeter" name="gjinia" value="tjeter">
+                <label for="tjeter">Other</label><br />
+
+
+                <br><br>
+                <!--ne kete input duhet vendosur numri i kontaktit te personit qe po ploteson kete formular-->
+                <!--numri i kontaktit duhet vendosur sipas rregullit te specifikuar ne atributin "pattern"-->
+                <label for="numer"> PHONE NUMBER </label><br>
+                <input type="text" id="numer" name="celulari" placeholder="XXX-XXXXXXX" pattern="[0-9]{3}-[0-9]{7}" required>
+                <br><br>
+                <!--ne kete input duhet vendosur email-i i personit qe po ploteson kete formular-->
+                <label for="email">EMAIL</label><br>
+                <input type="text" id="email" name="email" placeholder="Enter your email..." required>
+                <br><br>
+                <!--ne kete input duhet vendosur mesazhiqe perdoruesi deshiron te dergoje-->
+                <label for="message">MESSAGE</label><br>
+                <textarea id="message" name="message" placeholder="Write something..." required></textarea>
+                <br><br>
+                <!--butoni dergo ben qe mesazhi te dergohet-->
+                <input type="submit" value="Submit">
+                <!--butoni pastro ben qe formulari te kthehej ne gjendjen fillesatre(i paplotesuar)-->
+                <input type="submit" value="Reset" onclick="clearForm()">
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('.form-container');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Parandalon dërgimin e formës
+
+                // 1. Verifikimi i plotesimit të të gjitha fushave të tekstit dhe numrit të telefonit
+                var emri = document.querySelector('input[name="emri"]').value;
+                var mbiemri = document.querySelector('input[name="mbiemri"]').value;
+                var gjinia = document.querySelector('input[name="gjinia"]:checked');
+                var celulari = document.querySelector('input[name="celulari"]').value;
+                var email = document.querySelector('input[name="email"]').value;
+                var message = document.querySelector('textarea[name="message"]').value;
+
+                if (!emri || !mbiemri || !gjinia || !celulari || !email || !message) {
+                    alert('Please complete all fields!');
+                    return;
+                }
+
+                // 2. Verifikimi i formatit të numrit të celularit
+                if (!/^\d{3}-\d{7}$/.test(celulari)) {
+                    alert('The mobile number must be in the format XXX-XXXXXXX!');
+                    return;
+                }
+
+                // 3. Verifikimi i formatit të email-it
+                if (!/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                    alert('The email must be in the correct form!');
+                    return;
+                }
+
+                //4. Shtimi i informacionit në të njëjtin dokument HTML
+                var infoDiv = document.createElement('div');
+                infoDiv.innerHTML = `<div style="padding: 3% 0 3% 5%; background-color: antiquewhite;">
+                            <h3 style="margin:0;"> Sent information:</h3>
+                            <p><strong>Name:</strong> ${emri}</p>
+                            <p><strong>Last Name:</strong> ${mbiemri}</p>
+                            <p><strong>Gender:</strong> ${gjinia.value}</p>
+                            <p><strong>Phone number:</strong> ${celulari}</p>
+                            <p><strong>Email:</strong> ${email}</p>
+                            <p style="margin:0;"><strong>Message:</strong> ${message}</p>
+                            </div>
+                            `;
+                document.body.appendChild(infoDiv);
+
+                // Pastro fushat
+                clearForm();
+            });
+
+            // 5. Përdorimi i vektorëve për të kapur të gjitha komponentët e tipit tekst në formë
+            var inputFields = form.querySelectorAll('input[type="text"], input[type="tel"]');
+            var textareaField = form.querySelector('textarea');
+
+            // 6. Përcakto tabindex për fushat
+            inputFields.forEach(function (field, index) {
+                field.setAttribute('tabindex', index + 1);
+            });
+            textareaField.setAttribute('tabindex', inputFields.length + 1);
+        });
+
+        //7. Funksioni për pastrimin e formës
+        function clearForm() {
+            document.querySelector('.form-container').reset();
+        }
+    </script>
+
+    <script src="../js/StrayConnect.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+/********************************1025px—1200px MEDIA QUERY***************************/
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+
+    /*********************************header*****************************************/
+    
+    /*zvogelojme font-in dhe margin e elementeve te header*/
+    .topnav a,
+    #contact-header nav a {
+        margin-left: 0%;
+        font-size: 14px;
+    }
+
+    #contact-header #logo,
+    header #logo{
+        font-size: 1.5rem;
+        margin-left: 2%;
+    }
+
+    /**************************************************HOME**********************************************/
+
+    /*rrisim lartesine e elementeve qe permbajne caretakers-info*/
+    .border-box-caretakers{
+        height: 310px;
+    }
+
+    /*kthejme flex-at ne drejtim vertikal*/
+    #home-caretakers div.w-30 div.d-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*rrisim lartesine e elmentit paragraf*/
+    #home-review p.h-130px{
+        height: 170px;
+    }
+
+    /************************************************ABOUT**********************************************/
+
+    /*vendosim gjeresine maksimale ne sesionin e meposhtem*/
+    #about-help{
+        width: 100%;
+    }
+
+    /*************************************************PETS***************************************************/
+
+    .container {
+        width: 241px;
+        height: 253px;
+    }
+
+    /*zvogelojme font-in*/
+    .text{
+        font-size: 15px;
+    }
+
+    /***************************************************ADOPT**********************************************/
+         
+    /*zvogelojme largesine ne te majte te elementit*/
+    #adopt-section1.ml-10{
+        margin-left: 3%;
+    }
+
+    #adopt-section4 img.h-200px{
+        height: 130px;
+    }
+
+    /****************************************************footer*********************************************/
+
+    /*rrisim padding ne footer*/
+    footer{
+        padding: 2%;
+    }
+}
+
+
+/********************************1201px—1300px MEDIA QUERY***************************/
+@media screen and (min-width:1201px) and (max-width:1390px){
+    /**********************************************header************************************************************/
+
+
+    /*zvogelojme font-in dhe margin e elementeve te header*/
+    .topnav a,
+    #contact-header nav a {
+        margin-left: 0%;
+    }
+
+    #contact-header #logo,
+    header #logo {
+        font-size: 1.5rem;
+        margin-left: 2%;
+    }
+
+    /**************************************************HOME**********************************************/
+
+    /*rrisim lartesine e elementeve qe permbajne caretakers-info*/
+    .border-box-caretakers {
+        height: 310px;
+    }
+
+    /*kthejme flex-at ne drejtim vertikal*/
+    #home-caretakers div.w-30 div.d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /************************************************ABOUT**********************************************/
+
+    /*zvogelojme gjeresine e imazhit ne sesionin e katert te adopt.html*/
+    #adopt-section4 img.h-200px {
+        height: 150px;
+    }
+}

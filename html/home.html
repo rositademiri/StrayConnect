@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StrayConnect</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <link rel=" stylesheet" href="../css/StrayConnect.css" />
+    <link rel=" stylesheet" href="../css/media-query1.css" />
+    <link rel=" stylesheet" href="../css/media-query2.css" />
+    <link rel=" stylesheet" href="../css/media-query3.css" />
+    <link rel=" stylesheet" href="../css/media-query4.css" />
+    <script src="../js/font_awesome.js"></script>
+</head>
+<body>
+    <header>
+        <!--duke klikuar ne elementet qe ndodhen ne nav(navigation)mund te shkojme te faqja e specifikuar me ane te nje linku-->
+        <nav class="topnav" id="myTopnav">
+            <a id="logo">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                StrayConnect
+            </a>
+            <a class="active hover">
+                <i class="fa-solid fa-house">&nbsp;</i>
+                Home
+            </a>
+            <a href="about.html" class="hover">
+                <i class="fa-solid fa-magnifying-glass">&nbsp;</i>
+                About us
+            </a>
+            <a href="pets.html" class="hover">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                Pets
+            </a>
+            <a href="adopt.html" class="hover">
+                <i class="fa-solid fa-gift">&nbsp;</i>
+                Adoption
+            </a>
+            <a href="tips.html" class="hover">
+                <i class="fa-solid fa-pen">&nbsp;</i>
+                Tips
+            </a>
+            <a href="contact.html" class="hover">
+                <i class="fa-solid fa-phone">&nbsp;</i>
+                Contact
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+        <div class="bg-header">
+            <blockquote class="slideIn">
+                "Adopting a stray pet is like finding a diamond in the rough.
+                <br />They may come with scars, but with love, they shine brighter than ever."
+            </blockquote>
+        </div>
+
+    </header>
+    <main>
+        <!--seksioni ne faqen home ku flitet shkurt rreth website-it-->
+        <section id="home-about" class="d-flex ml-5 col-gap-10 mt-15">
+            <!--flex i perbere nga nje element qe permban paragraf dhe nje element imazh-->
+            <div class="w-50">
+                <h1 class="font-2-5rem">What is this page about</h1>
+                <p class="text-indent-30px mt-7 font-18px">
+                    This site serves as a platform for information and discussion on a variety of topics, 
+                    including but not limited to pet adoption, animal welfare, and compassionate living. 
+                    Users can ask questions, ask for advice.
+                </p>
+                <p class="text-indent-30px font-18px">
+                    Additionally, we provide resources such as articles, guides and stories to educate 
+                    and inspire individuals interested in adopting pets or supporting animal welfare causes.
+                </p>
+                <div class="mt-3">
+                    <a href="about.html" class="link-about">Learn more</a>
+                </div>
+            </div>
+            <div class="w-50">
+                <img src="../img/home/home-photo1.jpg" alt="cat-photo" class="w-90" />
+            </div>
+        </section>
+        <!--seksioni ku ndodhen informacionet mbi kujdestaret e kafsheve-->
+        <section id="home-caretakers">
+            <h1 class="mt-15 ml-5">Our Caretakers</h1>
+            <!--flex me tre elemente ku ne secilin ndodhet informacion mbi nje nga kujdestaret-->
+            <div class="d-flex col-gap-10 bg-d967489c p-3">
+                <div class="w-30">
+                    <div class="d-flex flex-dir-column border-box-caretakers">
+                        <!--element flex ne drejtim vertikal qe permban imazhin e kujdestarit,emrin,email-in dhe nje pershkrim te shkurter ne elementet e saj femije-->
+                        <div class="d-flex">
+                            <img src="../img/home/caretaker1.png" alt="caretaker-1-image" class="caretakers-photo flip-container " />
+                            <div class="ml-12 pt-5">
+                                <span><b>Sarah Thompson</b></span><br /><hr />
+                                <a target="_blank" href="mailto:sarah.thompson@example.com" class="text-decor-none font-weight-bold">
+                                    sarah.thompson@example.com
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                                <i>
+                                    Sarah has helped many animals find their forever homes over the years.
+                                    <br /><br />These animals include kittens, senior dogs and pets with special needs.
+                                </i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-30">
+                    <div class="d-flex flex-dir-column border-box-caretakers">
+                        <div class="d-flex">
+                            <img src="../img/home/caretaker2.png" alt="caretaker-2-image" class="caretakers-photo flip-container " />
+                            <div class="ml-12 pt-5">
+                                <span><b>Javier Rodriguez</b></span><br /><hr />
+                                <a target="_blank" href="mailto:javier.rodriguez@example.com" class="text-decor-none font-weight-bold">
+                                    javier.rodriguez@example.com
+                                </a>
+                            </div>
+                        </div>
+                        <p>
+                            <i>
+                                Javier discovered his love for animals while growing up on a farm in the countryside.
+                                <br /><br />
+                                After moving to the city, he realized that many stray animals lacked the love and care they deserved.
+                            </i>
+                        </p>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="w-30">
+                    <div class="d-flex flex-dir-column border-box-caretakers">
+                        <div class="d-flex">
+                            <img src="../img/home/caretaker3.png" alt="caretaker-3-image" class="caretakers-photo flip-container " />
+                            <div class="ml-12 pt-5">
+                                <span><b>Emily Nguyen</b></span><br /><hr />
+                                <a target="_blank" href="mailto:emily.nguyen@example.com" class="text-decor-none font-weight-bold">
+                                    emily.nguyen@example.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>
+                                <i>
+                                    Emily has over seven years of experience working with animals in a variety of fields.<br /><br />
+                                    Some of them are veterinary assistants and animal shelter volunteers.
+                                </i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--buton i cili kur klikohet te con ne faqen me profilet e kafsheve, ne kete website(pets.html)-->
+            <div class="mt-3 ml-42">
+                <a href="pets.html" class="link-about">View animal profiles</a>
+            </div>
+        </section>
+        <!--seksioni ku permban informacion shkurt mbi benefitet dhe keshilla si te kujdesesh per kafshet shtepiake-->
+        <!--seksioni eshte nje flex i cili permban tre element, dy div dhe nje imazh-->
+        <section id="home-tips" class="d-flex col-gap-5 ml-5 mt-20">
+            <div class="w-25">
+                <h1>Benefits</h1>
+                <hr class="border-style-dashed" />
+                <!--informacioni ndodhet ne li(elementet e listes) se nje ul(liste e paradhitur)-->
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                        <b>Life saving</b><br />By adopting a stray animal,
+                        you provide them with a loving home and save them from possible euthanasia in overcrowded shelters.
+
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                        <b>Health benefits:</b><br />Research suggests that pet ownership can lead to improved mental 
+                        and physical health, including reduced stress, anxiety and loneliness.
+                    </li>
+                </ul>
+                <div class="mt-3 ml-28">
+                    <a href="pets.html" class="link-about">Learn more</a>
+                </div>
+            </div>
+            <div class="w-30">
+                <figure class="d-flex flex-dir-column">
+                    <img src="../img/home/home-photo2.jpg" alt="reading-dog-photo" class="w-100" />
+                    <figcaption>Curiosities</figcaption>
+                </figure>
+            </div>
+            <div class="w-25">
+                <h1>Advices</h1>
+                <hr class="border-style-dashed" />
+                <!--informacioni ndodhet ne li(elementet e listes) se nje ul(liste e paradhitur)-->
+                <ul class="fa-ul mb-5">
+                    <li>
+                        <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                        <b>Regular exercise:</b> <br />Make sure your pet gets enough physical activity to maintain 
+                        a healthy weight, prevent boredom and stimulate their mind.
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>
+                        <b>Identification:</b> <br />Make sure your pet wears a collar with identification 
+                        tags that contain your contact information.
+                    </li>
+                </ul>
+                <div class="mt-3 ml-28">
+                    <a href="tips.html" class="link-about">Learn more</a>
+                </div>
+            </div>
+        </section>
+
+        <!--seksioni i cili mban komente te personave qe kane perdorur website-in tone-->
+        <!--seksioni eshte organizuar ne nje flex me tre elemente pasi vec tre komente do te shfaqen per mos te ngarkuar faqen-->
+        <section id="home-review">
+            <h1 class="ml-15 mt-15 font-50px">Reviews</h1>
+            <hr class="border-style-dot" />
+            <div class="d-flex ml-10 mr-12 col-gap-10 mt-3">
+                <article class="d-flex flex-dir-column w-30 bg-2f4f4f26 border-rad-10 p-1">
+                    <p class="align-center h-130px">
+                        "Adopting from this site was a very easy experience. The foster I was connected with was extremely kind and patient,
+                        answering all my questions and guiding me through the adoption process. "
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <img src="../img/home/review.jpg" alt="review-profile-image" class="review-photo border-rad-100 " />
+                        <div class="ml-3 font-small">
+                            <span><b>Michael R.</b></span>
+                            <br /><hr />
+                            <span>@Michael R.</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="d-flex flex-dir-column w-30 bg-2f4f4f26 border-rad-10 p-1">
+                    <p class="align-center h-130px">
+                        " I can't thank StrayConnect enough for helping me find my new best friend! I stumbled upon their 
+                        site while searching for adoptable pets in my area, and I'm so glad I did."
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <img src="../img/home/review.jpg" alt="review-profile-image" class="review-photo border-rad-100 " />
+                        <div class="ml-3 font-small">
+                            <span><b>Jennifer L.</b></span>
+                            <br /><hr />
+                            <span>@Jennifer L.</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="d-flex flex-dir-column w-30 bg-2f4f4f26 border-rad-10 p-1">
+                    <p class="align-center h-130px">
+                        "I adopted my cat, Whiskers, through this website and couldn't be happier with my experience. 
+                        The site was easy to navigate and had lots of adorable animals to choose from."
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <img src="../img/home/review.jpg" alt="review-profile-image" class="review-photo border-rad-100 " />
+                        <div class="ml-3 font-small">
+                            <span><b>David H.</b></span>
+                            <br /><hr />
+                            <span>@David H.</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="mt-3 ml-42">
+                <a href="contact.html" class="link-about">Write us a comment</a>
+            </div>
+        </section>
+        <!--eshte element i marre nga nje faqe tjeter(widget)ku mund te bejme subscribe duke klikuar-->
+        <div data-getsitecontrol-inline="402669" class="mb-5"></div>
+    </main>
+    <footer class="d-flex">
+        <!--flex i perbere nga kater element te vendosur horizontalisht-->
+        <!--Logo-->
+        <div class="w-25">
+            <h2 class="font-2-5rem mt-15">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                <span>StrayConnect</span>
+            </h2>
+        </div>
+        <!--Adresa-->
+        <div class="w-25">
+            <i class="fa-solid fa-location-dot font-2rem"></i>
+            <h2>Address</h2>
+            <span class="color-white font-weight-bold">
+                Zona 13, Rruga Kavajës,<br />
+                XXX, Tirana 305,<br />
+                Albania
+            </span>
+        </div>
+        <!--Kontaktet-->
+        <div class="w-25">
+            <i class="fa-solid fa-phone font-2rem"></i>
+            <h2>Contacts</h2>
+            <!--ne momentin qe klikohet numri i telefonit i shfaqur ne ekran ateher telefonohet numri qe ndodhet brenda href-->
+            <a href="tel:123-456-7890" class="text-decor-none color-white font-weight-bold">123-456-7890</a><br /><br />
+            <!--ne momentin qe klikohet nje nga email-et e shfaqura ne ekran ateher hapet faqja e email per te derguar nje mesazh ne adresen qe eshte klikuar-->
+            <a target="_blank" href="mailto:myemail@gmail.com" class="text-decor-none color-white font-weight-bold">
+                myemail@gmail.com<br />
+                myemail2@gmail.com
+            </a>
+        </div>
+        <!--Oret kur jemi aktiv-->
+        <div class="w-25">
+            <i class="fa-regular fa-clock font-2rem"></i>
+            <h2>Opening hours</h2>
+            <span class="color-white font-weight-bold">
+                Monday- Friday: 8:00 - 22:00<br />
+                Saturday: 8:00 - 23:00
+            </span>
+        </div>
+    </footer>
+    <script>
+        //kodi i marre per widget
+        "use strict"; !function (t, e) { if (!e.documentMode) { var n = function () { (n.q = n.q || []).push(arguments) }; t.gsc = t.gsc || n; var s = new XMLHttpRequest; s.open("get", "https://l.getsitecontrol.com/d7ol0j27.json", !0), s.onload = function () { var n = JSON.parse(s.responseText); if (n && n.script) { var c = e.createElement("script"); c.onload = function () { t.gsc.start && t.gsc.start(n) }, c.src = n.script.mjs || n.script, e.head.appendChild(c) } }, s.send(null) } }(window, document);
+
+
+    </script>
+
+    <script src="../js/StrayConnect.js"></script>
+</body>
+
+</html>

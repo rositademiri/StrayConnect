@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <title>Application StrayConnect</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <link rel="stylesheet" href="../css/StrayConnect.css" />
+</head>
+<body>
+    <main>
+        <fieldset>
+            <!--faqe qe shfaqet kur klikohet butoni "apliko" ne faqen adopt.html-->
+            <legend>Apliko</legend>
+            <br /><br />
+                  <form id="upload"  method="POST" enctype="multipart/form-data">
+                      <!--ne kete input duhet vendosur emri i personit qe po ploteson kete formular-->
+                      <label for="name"> EMRI: </label>
+                      <input type="text" id="name" name="emri" placeholder="Shkruani emrin tuaj..." required>
+                      <br /><br />
+
+                      <!--ne kete input duhet vendosur email-i i personit qe po ploteson kete formular-->
+                      <label for="email">EMAIL</label>
+                      <input type="text" id="email" name="email" placeholder="Shkruani email-in tuaj..." required>
+                      <br /><br />
+
+                      <!--ne kete input vendoset data kur jane te lire per takim-->
+                      <label for="data">Kur mund të na takoni?<br /></label>
+                      <input type="date" id="data" name="data" /><br /><br />
+
+                      <!--ne kete input vendoset emri i kafshes qe duan te biresojne-->
+                      <!--datalist jep sugjerimet me emrat e te gjithe kafsheve ose opsionin per mos te zgjedhur specifikisht-->
+                      <datalist id="search">
+                          <option value="Mos specifiko">
+                          <option value="Max">
+                          <option value="Mittens">
+                          <option value="Buddy">
+                          <option value="Luna">
+                          <option value="Rocky">
+                          <option value="Sophie">
+                      </datalist>
+                      <label for="kerko">Cilën kafshë dëshironi të birësoni?</label>
+                      <input type="search" id="kerko" list="search" name="kerko"><br /><br />
+
+                      <!--ne kete input vendoset nje ose me shume dokumenta vertetuese per personat qe kane biresuar me pare-->
+                      <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+                      <!--ky input mundeson drag and drop te file-ve-->
+                      <div>
+                          <label for="fileselect">Në qoftë se keni birësuar më parë jeni të lutur të na dërgoni një dokument verifikimi:</label>
+                          <br /><br />
+                          <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+                          <br /><br />
+                          <div id="filedrag">ose bëj drop një file-i</div>
+                      </div>
+                      <!--pasi dokumentat jane ngarkuar emrat e tyre do te shfaqen brenda ketij elementi-->
+                      <div id="messages">
+                          <p>Dokumentat e ngarkuara</p>
+                      </div>
+                      <br /><br />
+                      <!--ne kete input mund te zgjidhet vetem nje nga opsionet e specifikuara ne "option value"-->
+                      <label for="number">Sa kafshe shtepiake keni aktualisht?</label>
+                      <select name="numer" id="number">
+                          <option value="nje"> 1</option>
+                          <option value="dy">2</option>
+                          <option value="tjeter">Tjetër</option>
+                      </select><br /><br />
+
+                      <!--te dhenave te vendosura i bejme submit-->
+                      <input type="submit" value="Dërgo aplikimin">
+                  </form>
+        </fieldset>
+    </main>
+    <script>
+
+        /*drag and drop file-t*/
+
+        //zgjedhim elementet ne baze te id te tyre
+        function $id(id) {
+            return document.getElementById(id);
+        }
+
+        //
+        // informacion output-i
+        function Output(msg) {
+            var m = $id("messages");
+            m.innerHTML = msg + m.innerHTML;
+        }
+        // therritja e file-it fillestare
+        if (window.File && window.FileList && window.FileReader) {
+            Init();
+        }
+
+        //
+        // inicializimi
+        function Init() {
+
+            var fileselect = $id("fileselect"),
+                filedrag = $id("filedrag"),
+                submitbutton = $id("submitbutton");
+
+            // perzgjedhja e file-it
+            fileselect.addEventListener("change", FileSelectHandler, false);
+
+            //shikojme nese XHR2 eshte e disponueshme
+            var xhr = new XMLHttpRequest();
+            if (xhr.upload) {
+
+                // file drop
+                filedrag.addEventListener("dragover", FileDragHover, false);
+                filedrag.addEventListener("dragleave", FileDragHover, false);
+                filedrag.addEventListener("drop", FileSelectHandler, false);
+                filedrag.style.display = "block";
+            }
+
+        }
+
+        // file drag hover
+        function FileDragHover(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            e.target.className = (e.type == "dragover" ? "hover" : "");
+        }
+
+        // perzgjedhja e file-it
+        function FileSelectHandler(e) {
+
+            // nderprit eventin dhe hover
+            FileDragHover(e);
+
+            // merr FileList object
+            var files = e.target.files || e.dataTransfer.files;
+
+            // proceso te gjitha File objects
+            for (var i = 0, f; f = files[i]; i++) {
+                ParseFile(f);
+            }
+
+        }
+
+        //ben te mundur qe te shfaqen emrat e file-ve te perzgjedhura
+
+        function ParseFile(file) {
+
+            Output(
+                "<p>File information: <strong>" + file.name +
+                "</strong> type: <strong>" + file.type +
+                "</strong> size: <strong>" + file.size +
+                "</strong> bytes</p>"
+            );
+
+        }
+    </script>
+</body>
+</html>
+

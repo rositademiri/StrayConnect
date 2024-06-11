@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Kafshët StrayConnect</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <link rel=" stylesheet" href="../css/StrayConnect.css" />
+    <link rel=" stylesheet" href="../css/media-query1.css" />
+    <link rel=" stylesheet" href="../css/media-query2.css" />
+    <link rel=" stylesheet" href="../css/media-query3.css" />
+    <link rel=" stylesheet" href="../css/media-query4.css" />
+    <script src="../js/font_awesome.js"></script>
+</head>
+<body>
+    <header>
+        <!--duke klikuar ne elementet qe ndodhen ne nav(navigation)mund te shkojme te faqja e specifikuar me ane te nje linku-->
+        <nav class="topnav" id="myTopnav">
+            <a id="logo">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                StrayConnect
+            </a>
+            <a href="home.html" class="hover">
+                <i class="fa-solid fa-house">&nbsp;</i>
+                Home
+            </a>
+            <a href="about.html" class="hover">
+                <i class="fa-solid fa-magnifying-glass">&nbsp;</i>
+                About us
+            </a>
+            <a href="pets.html" class="active hover">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                Pets
+            </a>
+            <a href="adopt.html" class="hover">
+                <i class="fa-solid fa-gift">&nbsp;</i>
+                Adoption
+            </a>
+            <a href="tips.html" class="hover">
+                <i class="fa-solid fa-pen">&nbsp;</i>
+                Tips
+            </a>
+            <a href="contact.html" class="hover">
+                <i class="fa-solid fa-phone">&nbsp;</i>
+                Contact
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <!--ketu eshte krijuar nje grafik me ane te librarive te javascript(amchart)-->
+        <article id="pets-section1" class="d-flex align-items-center p-3 mt-10">
+            <h1>The number of stray animals in some countries of the world (in millions)</h1>
+
+            <div id="chartdiv"></div>
+        </article>
+        <!--seksioni qe tregon benefitet e adoptimit te kafsheve-->
+        <section id="pets-section2" class="mt-15">
+            <h1 class="ml-5 mt-5">The benefits of adopting a stray animal</h1>
+            <h3 class="ml-5">(Click/mouse over photo to see each benefit)</h3>
+            <hr class="border-style-dashed" />
+            <!--flex i perbere nga tre imazhe ,ne momentin qe behet hover shfaqet informacion-->
+            <div class="d-flex col-gap-10 justify-content-center mt-5">
+                <div class="container benefits-img-container1 w-25">
+                    <h1 class="centered border-pets">1</h1>
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>Life Saving </h3>
+                            <p>
+                                By adopting a stray animal, you provide them with a loving home 
+                                and save them from being euthanized in overcrowded shelters.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container benefits-img-container2 w-25">
+                    <h1 class="centered border-pets">2</h1>
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>Unconditional love: </h3>
+                            <p>
+                                Stray pets often show immense gratitude and loyalty to their adopters, forming deep and rewarding bonds.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container benefits-img-container3 w-25">
+                    <h1 class="centered border-pets">3</h1>
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>Health benefits: </h3>
+                            <p>
+                                Research suggests that pet ownership can lead to improved mental and physical health, including reduced anxiety and loneliness.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--flex i perbere nga tre imazhe ,ne momentin qe behet hover shfaqet informacion-->
+            <div class="d-flex col-gap-10 justify-content-center mt-5">
+                <div class="container benefits-img-container4 w-25">
+                    <h1 class="centered border-pets">4</h1>
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>Friendship:</h3>
+                            <p>
+                                Pets provide companionship and emotional support, especially for those who live alone or face challenging circumstances.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container benefits-img-container5 w-25">
+                    <h1 class="centered border-pets">5</h1>
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>Increased activity: </h3>
+                            <p>
+                                Having a pet encourages physical activity through walks, outdoor playtime, benefiting both pet and owner's health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container benefits-img-container6 w-25">
+                    <h1 class="centered border-pets">6</h1>
+                    <div class="overlay">
+                        <div class="text">
+                            <h3>Sense of responsibility: </h3>
+                            <p>
+                                Caring for a pet gives individuals a sense of purpose and responsibility, promoting personal growth and well-being.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--seksioni permban profilet e te gjitha kafsheve qe jane per adoptim-->
+        <section id="pets-section3">
+            <h1 class="align-center mt-10">Our animals</h1>
+            <div class="carousel-pets-container">
+                <!--nje carouselose slideshow(kur klikohen butonat shfaqet profili i radhes)-->
+                <article>
+                    <div class="carousel-pets-item d-flex">
+                        <!--permban informacionet e profilit te seciles kafshe-->
+                        <div class="pets-profile-container align-self-center">
+                            <img src="../img/pets/pets-profile1.jpg" alt="pet-profile 1" />
+                            <div class="pets-profile-content">
+                                <h1>Max - The loyal labrador</h1>
+                            </div>
+                        </div>
+                        <div class="pl-4">
+                            <p><b class="font-18px">Name:</b> Max </p><hr />
+                            <p><b class="font-18px">Nickname: </b> The loyal labrador</p><hr />
+                            <p><b class="font-18px">Gender:</b> Male</p><hr />
+                            <p><b class="font-18px">Age: </b> 2 years old</p><hr />
+                            <p><b class="font-18px">Type:</b>  Labrador Retriever Mix</p><hr />
+                            <p><b class="font-18px">Medical condition:</b> Fully vaccinated and sterilized, healthy.</p><hr />
+                            <p><b class="font-18px">Personality traits: </b>Friendly, loyal, energetic.</p>
+                            <p>
+                                <b class="font-18px"> His Story:</b>Max was found wandering the streets, his tail wagging and his 
+                                hopeful eyes catching the hearts of rescuers. Despite his past struggles, 
+                                Max's spirit remains unbroken. He likes to play with himself, take long walks, and to get cuddles. 
+                                Max is eager to find a loving family that will cherish him forever.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="carousel-pets-item d-flex">
+                        <div class="pets-profile-container align-self-center">
+                            <!--permban informacionet e profilit te seciles kafshe-->
+                            <img src="../img/pets/pets-profile2.jpg" alt="pet-profile 2" />
+                            <div class="pets-profile-content">
+                                <h1>Mittens - Playful kitten</h1>
+                            </div>
+                        </div>
+                        <div class="pl-4">
+                            <p><b class="font-18px">Name:</b> Mittens </p><hr />
+                            <p><b class="font-18px">Nickname: </b> Playful kitten</p><hr />
+                            <p><b class="font-18px">Gender:</b> Female</p><hr />
+                            <p><b class="font-18px">Age: </b> 4 months</p><hr />
+                            <p><b class="font-18px">Type:</b>  Domestic shorthair (Tabby)</p><hr />
+                            <p><b class="font-18px">Medical Condition:</b>  Vaccinated, healthy.</p><hr />
+                            <p><b class="font-18px">Personality traits: </b> Playful, curious, loving.</p>
+                            <p>
+                                <b class="font-18px">Her story:</b> Mittens was discovered abandoned in a cardboard box on a cold night. 
+                                Despite her rough start, she is a little ball of energy and love. Mittens loves chasing toys, climbing cat 
+                                trees, and curling up in your lap for a cozy nap. She is looking for a forever home where she can explore, 
+                                play and get lots of love.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="carousel-pets-item d-flex">
+                        <!--permban informacionet e profilit te seciles kafshe-->
+                        <div class="pets-profile-container align-self-center">
+                            <img src="../img/pets/pets-profile3.webp" alt="pet-profile 3" />
+                            <div class="pets-profile-content">
+                                <h1>Buddy - The gentle giant</h1>
+                            </div>
+                        </div>
+                        <div class="pl-4">
+                            <p><b class="font-18px">Name:</b> Buddy </p><hr />
+                            <p><b class="font-18px">Nickname:</b> The gentle giant</p><hr />
+                            <p><b class="font-18px">Gender:</b> Male</p><hr />
+                            <p><b class="font-18px">Agw:</b> 4 years old</p><hr />
+                            <p><b class="font-18px">Type:</b> Great Dane</p><hr />
+                            <p><b class="font-18px">Medical Condition: </b>Vaccinated, worm negative, healthy.</p><hr />
+                            <p><b class="font-18px">Personality traits:</b> Gentle, loving, calm.</p><hr />
+                            <p>
+                                <b class="font-18px">His Story:</b>Buddy, a gentle giant, was found roaming the streets, 
+                                his large frame hiding a heart of gold. Despite his size, Buddy is a loving dog who loves 
+                                hugs and belly rubs. He likes quiet walks and holidays in the sun. Buddy hopes to find a 
+                                peaceful and loving home where he can be a loyal companion.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="carousel-pets-item d-flex">
+                        <!--permban informacionet e profilit te seciles kafshe-->
+                        <div class="pets-profile-container align-self-center">
+                            <img src="../img/pets/pets-profile4.jpg" alt="pet-profile 4" />
+                            <div class="pets-profile-content">
+                                <h1>Luna - The curious cat</h1>
+                            </div>
+                        </div>
+                        <div class="pl-4">
+                            <p><b class="font-18px">Name:</b> Luna </p><hr />
+                            <p><b class="font-18px">Nickname:</b> The curious cat</p><hr />
+                            <p><b class="font-18px">Gender: </b>Female</p><hr />
+                            <p><b class="font-18px">Age: </b>1 years old</p><hr />
+                            <p><b class="font-18px">Type:</b> Domestic shorthair (Calico)</p><hr />
+                            <p><b class="font-18px">Medical Condition:</b> Sterilizes, vaccinated, healthy.</p><hr />
+                            <p><b class="font-18px">Personality traits:</b>Curious, independent, playful.</p><hr />
+                            <p>
+                                <b class="font-18px">Her Story:</b>Luna was found exploring the streets, catching the 
+                                eye of her rescuers. She is a curious cat with a playful spirit. Luna likes 
+                                chasing laser lights, kicking feather toys, and relaxing in sunny places. She is looking 
+                                for a forever home where she can satisfy her curiosity and get lots of love.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="carousel-pets-item d-flex">
+                        <!--permban informacionet e profilit te seciles kafshe-->
+                        <div class="pets-profile-container align-self-center">
+                            <img src="../img/pets/pets-profile5.jpg" alt="pet-profile 5" />
+                            <div class="pets-profile-content">
+                                <h1>Rocky - The Resilient Terrier Mix </h1>
+                            </div>
+                        </div>
+                        <div class="pl-4">
+                            <p><b class="font-18px">Name:</b> Rocky </p><hr />
+                            <p><b class="font-18px">Nickname:</b> The Resilient Terrier Mix</p><hr />
+                            <p><b class="font-18px">Gender:</b> Male</p><hr />
+                            <p><b class="font-18px">Age: </b>3 years old</p><hr />
+                            <p><b class="font-18px">Type:</b> Terrier mix</p><hr />
+                            <p><b class="font-18px">Medical Condition:</b>  Sterilized, vaccinated, treated for flea infestation (currently healthy).</p><hr />
+                            <p><b class="font-18px">Personality traits:</b>  Energetic, calm, loyal.</p><hr />
+                            <p>
+                                <b class="font-18px">
+                                    His story: </b> Rocky, a terrier mix, was found scavenging on the street. Despite his rough past, Rocky has a heart full 
+                                    of love and energy. He loves running around, playing with squeaky toys and cuddling on the couch. Rocky is looking for an 
+                                    active family who will appreciate his zest for life and give him the love and care he deserves.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="carousel-pets-item d-flex">
+                        <!--permban informacionet e profilit te seciles kafshe-->
+                        <div class="pets-profile-container align-self-center">
+                            <img src="../img/pets/pets-profile6.jpg" alt="pet-profile 6" />
+                            <div class="pets-profile-content">
+                                <h1>Sophie - Sweet Siamese</h1>
+                            </div>
+                        </div>
+                        <div class="pl-4">
+                            <p><b class="font-18px">Name:</b>  Sophie </p><hr />
+                            <p><b class="font-18px">Nickname: </b> Sweet Siamese</p><hr />
+                            <p><b class="font-18px">Gender: </b> Female</p><hr />
+                            <p><b class="font-18px">Age: </b> 10 years old</p><hr />
+                            <p><b class="font-18px">Type: </b> Siamese</p><hr />
+                            <p><b class="font-18px">Medical Condition: </b>Vaccinated, diagnosed with mild arthritis, healthy.</p><hr />
+                            <p><b class="font-18px">Personality traits:</b>Sweet, loving, calm.</p><hr />
+                            <p>
+                                <b class="font-18px">
+                                    Her Story: </b>Sophie, a sweet Siamese cat, was found wandering 
+                                    the streets, her soft meows barely audible.Sophie is full of love. She enjoys quiet cuddle sessions, 
+                                    watching the birds from the window and resting in cozy beds. Sophie is looking for a quiet home 
+                                    where she can spend her golden years surrounded by love and comfort.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <a class="carousel-pets-btn ml-50" onclick="plusSlides(-1)">&lt;</a><!--kur klikohet butoni levizet ne profilin ne te majte-->
+            <a class="carousel-pets-btn" onclick="plusSlides(1)">></a><!--kur klikohet butoni levizet ne profilin ne te djathte-->
+        </section>
+        <!--seksioni permban histori te personave qe kane adoptuar kafshe ne website-in tone-->
+        <section class="mb-10">
+            <h2 class="ml-5 mt-10">Click below if you want to know some adoption stories:</h2>
+            <div class="ml-5">
+                <button type="button" class="collapsible">Lisa's lifelong companion:</button>
+                <!--kur klikohet ky element shfaqet informacioni qe ndodhet brenda paragrafit-->
+                <div class="story-content">
+                    <p>
+                        Browsing through pet adoption websites became somewhat of a routine for me after 
+                        losing my beloved dog last year. Each time, I hoped to find another furry friend who 
+                        could fill the void in my heart. Scrolling through your website one evening, a photo caught 
+                        my eye - a sweet-faced dog named Charlie. I immediately felt a connection. I filled out the 
+                        adoption form and after a few days of waiting, I got a call that Charlie was mine. Bringing 
+                        him home was like being reunited with an old friend. He has been by my side, bringing joy and 
+                        laughter to my life every day. Adopting Charlie from your site was one of the best decisions I ever made.
+                    </p>
+                </div>
+                <button type="button" class="collapsible">Mark's perfect combination:</button>
+                <!--kur klikohet ky element shfaqet informacioni qe ndodhet brenda paragrafit-->
+                <div class="story-content">
+                    <p>
+                        Adopting a pet has been on my mind for months, but I couldn't find the right connection. Then one day 
+                        I went to your website and saw a cat named Whiskers. His playful behaviors in the adoption video won me 
+                        over immediately. Without hesitation, I filled out the adoption application and anxiously awaited a response. 
+                        When I got the call that Whiskers was ready to come home with me, I couldn't contain my joy. Since then, he has 
+                        become my constant companion, bringing laughter and love to my home. Adopting Whiskers from your site was a true 
+                        combination of wonder and I am forever grateful for the opportunity.
+                    </p>
+                </div>
+                <button type="button" class="collapsible">Jenny's Journey with Jasper:</button>
+                <!--kur klikohet ky element shfaqet informacioni qe ndodhet brenda paragrafit-->
+                <div class="story-content">
+                    <p>
+                        I had been thinking about adopting a pet for a while, but I wasn't sure if I was ready for the commitment. 
+                        That all changed when I found your website and saw a picture of a shy cat named Jasper. Something about his 
+                        soft eyes drew me in and I knew I had to meet him. After a few visits to the shelter and some quality bonding time, 
+                        I knew Jasper was meant to be part of my family. Bringing him home was the beginning of a beautiful journey filled 
+                        with love, laughter and countless memories. Adopting Jasper from your website was the best decision I have ever made 
+                        and I am grateful for the opportunity for him to be a forever home.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="d-flex">
+        <!--flex i perbere nga kater element te vendosur horizontalisht-->
+        <!--Logo-->
+        <div class="w-25">
+            <h2 class="font-2-5rem mt-15">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                <span>StrayConnect</span>
+            </h2>
+        </div>
+        <!--Adresa-->
+        <div class="w-25">
+            <i class="fa-solid fa-location-dot font-2rem"></i>
+            <h2>Address</h2>
+            <span class="color-white font-weight-bold">
+                Zona 13, Rruga Kavajës,<br />
+                XXX, Tirana 305,<br />
+                Albania
+            </span>
+        </div>
+        <!--Kontaktet-->
+        <div class="w-25">
+            <i class="fa-solid fa-phone font-2rem"></i>
+            <h2>Contacts</h2>
+            <!--ne momentin qe klikohet numri i telefonit i shfaqur ne ekran ateher telefonohet numri qe ndodhet brenda href-->
+            <a href="tel:123-456-7890" class="text-decor-none color-white font-weight-bold">123-456-7890</a><br /><br />
+            <!--ne momentin qe klikohet nje nga email-et e shfaqura ne ekran ateher hapet faqja e email per te derguar nje mesazh ne adresen qe eshte klikuar-->
+            <a target="_blank" href="mailto:myemail@gmail.com" class="text-decor-none color-white font-weight-bold">
+                myemail@gmail.com<br />
+                myemail2@gmail.com
+            </a>
+        </div>
+        <!--Oret kur jemi aktiv-->
+        <div class="w-25">
+            <i class="fa-regular fa-clock font-2rem"></i>
+            <h2>Opening hours</h2>
+            <span class="color-white font-weight-bold">
+                Monday - Friday: 8:00 - 22:00<br />
+                Saturday: 8:00 - 23:00
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/StrayConnect.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <!-- Chart code -->
+    <script>
+        /*funksioni per te krijuar grafikun*/
+        am5.ready(function () {
+
+            // Krijojmë elementin kryesor të grafikut në një div me id "chartdiv"
+            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+            var root = am5.Root.new("chartdiv");
+
+            // Vendosim temën për grafikun
+            // https://www.amcharts.com/docs/v5/concepts/themes/
+            root.setThemes([
+                am5themes_Animated.new(root)
+            ]);
+
+            // Krijojmë grafikun XY
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/
+            var chart = root.container.children.push(am5xy.XYChart.new(root, {
+                panX: true,
+                panY: true,
+                wheelX: "panX",
+                wheelY: "zoomX",
+                pinchZoomX: true,
+                paddingLeft: 0,
+                paddingRight: 1
+            }));
+
+            // Shtojmë një kursor për interaktivitet
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+            cursor.lineY.set("visible", false);
+
+
+            // Stilizimi i etiketave të aksit x
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+            var xRenderer = am5xy.AxisRendererX.new(root, {
+                minGridDistance: 30, //Caktojmë distancën minimale midis vijave të grides në aksin X
+                minorGridEnabled: true// Lejojmë vijat e gridit të vogla në aksin X
+            });
+
+            // Vendosim stilizimin e etiketave të aksit X përmes një shablloni (template)
+            xRenderer.labels.template.setAll({
+                rotation: -90,// Rrotullojmë tekstin e etiketave në -90 gradë për t'u paraqitur vertikalisht
+                centerY: am5.p50,// Vendosim qendrën e tekstit të etiketave në mes të tyre vertikalisht
+                centerX: am5.p100, // Vendosim qendrën e tekstit të etiketave në këndin e djathtë horizontalisht
+                paddingRight: 15  // Vendosim një mbushje (padding) të djathtë për tekstin e etiketave për të ndarë nga vijat e aksit
+            });
+
+            // Vendosim rregullimin e rrjedhës së grides për aksin x
+            xRenderer.grid.template.setAll({
+                location: 1
+            })
+
+            // Krijojmë aksin x
+            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+                maxDeviation: 0.3,
+                categoryField: "country",
+                renderer: xRenderer,
+                tooltip: am5.Tooltip.new(root, {})
+            }));
+
+            // Stilizimi i aksit y
+            var yRenderer = am5xy.AxisRendererY.new(root, {
+                strokeOpacity: 0.1
+            })
+
+            // Krijojmë aksin y
+            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+                maxDeviation: 0.3,
+                renderer: yRenderer
+            }));
+
+            // Shtojmë seri të dhënash në grafik
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+            var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+                name: "Series 1",
+                xAxis: xAxis,
+                yAxis: yAxis,
+                valueYField: "value",
+                sequencedInterpolation: true,
+                categoryXField: "country",
+                tooltip: am5.Tooltip.new(root, {
+                    labelText: "{valueY}"
+                })
+            }));
+
+            // Stilizimi i kolonave të serisë
+            series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5, strokeOpacity: 0 });
+
+            // Adaptues për ngjyrat e kolonave
+            series.columns.template.adapters.add("fill", function (fill, target) {
+                return chart.get("colors").getIndex(series.columns.indexOf(target));
+            });
+
+            // Adaptues për ngjyrat e kornizave të kolonave
+            series.columns.template.adapters.add("stroke", function (stroke, target) {
+                return chart.get("colors").getIndex(series.columns.indexOf(target));
+            });
+
+
+            // Vendosim të dhënat për aksat x dhe y dhe për serinë
+            var data = [{
+                country: "Russia",
+                value: 4
+            },
+            {
+                country: "Balkan",
+                value: 8
+            },
+            {
+                country: "China",
+                value: 40
+            },
+            {
+                country: "USA",
+                value: 70
+            },
+            {
+                country: "India",
+                value: 72
+            },];
+
+            xAxis.data.setAll(data);
+            series.data.setAll(data);
+
+
+            // Animacionet për të shfaqur grafikun
+            // https://www.amcharts.com/docs/v5/concepts/animations/
+            series.appear(1000);
+            chart.appear(1000, 100);
+
+        }); // përfundimi i funksionit am5.ready()
+    </script>
+
+    <script src="../js/StrayConnect.js"></script>
+</body>
+</html>
+

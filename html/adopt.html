@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="sq">
+<head>
+    <title>Adopt StrayConnect</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <link rel=" stylesheet" href="../css/StrayConnect.css" />
+    <link rel=" stylesheet" href="../css/media-query1.css" />
+    <link rel=" stylesheet" href="../css/media-query2.css" />
+    <link rel=" stylesheet" href="../css/media-query3.css" />
+    <link rel=" stylesheet" href="../css/media-query4.css" />
+    <script src="../js/font_awesome.js"></script>
+</head>
+<body>
+    <header>
+        <!--duke klikuar ne elementet qe ndodhen ne nav(navigation)mund te shkojme te faqja e specifikuar me ane te nje linku-->
+        <nav class="topnav" id="myTopnav">
+            <a id="logo">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                StrayConnect
+            </a>
+            <a href="home.html" class="hover">
+                <i class="fa-solid fa-house">&nbsp;</i>
+                Home
+            </a>
+            <a href="about.html" class="hover">
+                <i class="fa-solid fa-magnifying-glass">&nbsp;</i>
+                About us
+            </a>
+            <a href="pets.html" class="hover">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                Pets
+            </a>
+            <a href="adopt.html" class="active hover">
+                <i class="fa-solid fa-gift">&nbsp;</i>
+                Adoption
+            </a>
+            <a href="tips.html" class="hover">
+                <i class="fa-solid fa-pen">&nbsp;</i>
+                Tips
+            </a>
+            <a href="contact.html" class="hover">
+                <i class="fa-solid fa-phone">&nbsp;</i>
+                Contact
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <!--seksioni permban nje flex me dy elemente (nje header dhe nje video)-->
+        <section id="adopt-section1" class="d-flex col-gap-10 align-items-center ml-10 mt-20">
+            <h1 class="align-center w-50 font-2-5rem p-1">Hans, the first puppy adopted in our center, already in his new home.</h1>
+            <div class="w-50">
+                <video controls width="400" playsinline preload="auto" >
+                    <source src="../img/video/hae3881b9_05_dry_dog_preview.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </section>
+            <!--seksioni ku ndodhet aplikimi per te adoptuar-->
+            <section id="adopt-section2">
+                <div class="d-flex justify-content-center mt-12 col-gap-10">
+                    <div>
+                        <h1>Adoption process</h1>
+                        <!--liste jo e radhitur ne te cilen gjenden si elemente li, te cilen permbajne fazat e procesit te adoptimit-->
+                        <ol class="font-larger">
+                            <li class="pb-5">Submit an adoption application</li>
+                            <li class="pb-5">Application review</li>
+                            <li class="pb-5">Meet the pet</li>
+                            <li class="pb-5">Home visit</li>
+                            <li class="pb-5">Take home your new member</li>
+                            <li class="pb-5">Ongoing support</li>
+                        </ol>
+                        <!--kur klikohet ky buton,hapet nje faqe e re me nje formular per aplikim(application.html)-->
+                        <button onclick="openNewTab()" class="hover">Application</button>
+                    </div>
+                    <img src="../img/adopt/application.jpg" alt="application photo"/>
+                </div>
+            </section>
+            <!--seksioni qe permban kerkesat qe duhen permbushur para adoptimit-->
+            <section>
+                <div class="d-flex flex-dir-column align-items-center mt-10">
+                    <h1 class="mt-5">Adoption requirements</h1>
+                    <!--th(tabel header)permban kerksat e adoptimit dhe td, permban nje pershkrim te shkurter per to-->
+                    <table id="adopt-requirement-table">
+                        <tr>
+                            <th>Age:</th>
+                            <td>You must be at least 18 years old to adopt a pet from our shelter. This ensures that the adopter is legally responsible for the animal's care</td>
+                        </tr>
+                        <tr>
+                            <th>Identification:</th>
+                            <td>A valid government-issued ID, such as a driver's license or passport, is required for the adoption process.</td>
+                        </tr>
+                        <tr>
+                            <th>Residence verification:</th>
+                            <td>Adopters should provide proof of residency, such as a lease agreement, mortgage statement or utility bill, to ensure they have a permanent home for the pet.</td>
+                        </tr>
+                        <tr>
+                            <th>Financial Stability:</th>
+                            <td>Adopters may be asked about their financial situation to ensure they can afford the costs associated with pet ownership.</td>
+                        </tr>
+                        <tr>
+                            <th>Home visit:</th>
+                            <td>Our shelter conducts home visits to assess the living environment and ensure it is suitable for the pet.</td>
+                        </tr>
+                        <tr>
+                            <th>Pet History:</th>
+                            <td>Adopters may be asked about their experience with pets and any current or past pets they have owned.</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <!--seksioni qe permban menyra te tjera per te kontribuar-->
+            <section id="adopt-section4">
+                <h1 class="align-center col-gap-10 p-1 mt-15"> How can I support your organization if I am unable to adopt? </h1>
+                <!--flex i cili permban 3 element, qe jane 3 menyrat e tjera te kontribuimit-->
+                <!--cdo element permban header, nje pershkrim te shurter dhe nje imazh-->
+                <div class="d-flex mt-5 justify-content-center col-gap-10">
+                    <article class="d-flex flex-dir-column align-items-center w-20 border-box-adopt p-1">
+                        <h4>Every contribution, big or small, makes a difference in the lives of stray animals in need.</h4>
+                        <figure class="d-flex flex-dir-column">
+                            <img src="../img/adopt/donate.png" class="h-200px" alt="donate-photo" />
+                            <figcaption>Donate</figcaption>
+                        </figure>
+                    </article>
+                    <article class="d-flex flex-dir-column align-items-center w-20 row-gap-4 border-box-adopt p-1">
+                        <h4>You can visit our center and help us take care of the animals<br /> together.</h4>
+                        <figure class="d-flex flex-dir-column">
+                            <img src="../img/adopt/volunteer.png" class="h-200px" alt="volunteer photo" />
+                            <figcaption>Voluntary work</figcaption>
+                        </figure>
+                    </article>
+                    <article class="d-flex flex-dir-column align-items-center w-20 row-gap-4 border-box-adopt p-1">
+                        <h4>You can spend time with our pets and take care of them until they find their forever home.</h4>
+                        <figure class="d-flex flex-dir-column">
+                            <img src="../img/adopt/foster.jpg" class="h-200px" alt="foster photo" />
+                            <figcaption>Partial adoption</figcaption>
+                        </figure>
+                    </article>
+                </div>
+                <div class="mt-3 ml-46">
+                    <a href="contact.html" class="link-about">Learn more</a>
+                </div>
+            </section>
+    </main>
+    <footer class="d-flex mt-5">
+        <!--flex i perbere nga kater element te vendosur horizontalisht-->
+        <!--Logo-->
+        <div class="w-25">
+            <h2 class="font-2-5rem mt-15">
+                <i class="fa-solid fa-paw">&nbsp;</i>
+                <span>StrayConnect</span>
+            </h2>
+        </div>
+        <!--Adresa-->
+        <div class="w-25">
+            <i class="fa-solid fa-location-dot font-2rem"></i>
+            <h2>Address</h2>
+            <span class="color-white font-weight-bold">
+                Zona 13, Rruga Kavajës,<br />
+                XXX, Tirana 305,<br />
+                Albania
+            </span>
+        </div>
+        <!--Kontaktet-->
+        <div class="w-25">
+            <i class="fa-solid fa-phone font-2rem"></i>
+            <h2>Contacts</h2>
+            <!--ne momentin qe klikohet numri i telefonit i shfaqur ne ekran ateher telefonohet numri qe ndodhet brenda href-->
+            <a href="tel:123-456-7890" class="text-decor-none color-white font-weight-bold">123-456-7890</a><br /><br />
+            <!--ne momentin qe klikohet nje nga email-et e shfaqura ne ekran ateher hapet faqja e email per te derguar nje mesazh ne adresen qe eshte klikuar-->
+            <a target="_blank" href="mailto:myemail@gmail.com" class="text-decor-none color-white font-weight-bold">
+                myemail@gmail.com<br />
+                myemail2@gmail.com
+            </a>
+        </div>
+        <!--Oret kur jemi aktiv-->
+        <div class="w-25">
+            <i class="fa-regular fa-clock font-2rem"></i>
+            <h2>Opening hours</h2>
+            <span class="color-white font-weight-bold">
+                Monday - Friday: 8:00 - 22:00<br />
+                Saturday: 8:00 - 23:00
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/StrayConnect.js"></script>
+</body>
+</html>

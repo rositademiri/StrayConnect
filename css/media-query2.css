@@ -1,0 +1,299 @@
+
+/********************************481px—768px MEDIA QUERY***************************/
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    /*************************header*****************************/
+
+    /*heqim shprehjen e backgroundit ne header*/
+    div blockquote {
+        display: none;
+    }
+
+    /*pervec femijes se pare ne navbar(logos) te tjeret nuk duken*/
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    /*icon-nen qe do klikojme per tu shfaqur menu-ja e shfaqim ne te djathte*/
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    /*navbar-it i japim position relativ ne varesi te klikimit te ikones*/
+    .topnav.responsive {
+        position: relative;
+    }
+    /*ikona do te kete position absolute ne te djathte te faqes*/
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /*linket do te shfaqen ne te majte te faqes*/
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    /****************************HOME********************************/
+
+    /*heqim shprehjen e background-in e home*/
+    div blockquote,
+    #home-caretakers div.ml-42,
+    #home-review div.ml-42 {
+        display: none;
+    }
+
+    /*i vendosim elementet header ne qender*/
+    h1, h1.ml-5,
+    h1.ml-15 {
+        text-align: center;
+        margin-left: 0;
+        font-size: 20px;
+    }
+
+    /*shfaqim madhesine e shkrimit me te vogel duke qene se ekrani eshte me i vogel*/
+    p.font-18px {
+        font-size: 15px;
+    }
+    /*Do kapim elementet qe permbajne flex dhe do ti shtojme vleren e flex-direction column*/
+    #home-tips,
+    #home-review > div.d-flex,
+    #home-caretakers > div.d-flex,
+    #pets-section1,
+    #pets-section2 > div.d-flex,
+    #adopt-section1,
+    #adopt-section2 > div.d-flex,
+    #adopt-section4 > div.d-flex,
+    #pets div.d-flex,
+    #home-about,
+    #pets-section3 div, d-flex,
+    #about-section1{
+        flex-direction: column; /*Elementet shfaqen ne menyre vertikale me qene se ekrani eshte me i ngushte*/
+        row-gap: 20px; /*midis elementeve leme nje hapesire me 20px*/
+    }
+
+    #home-tips,
+    #home-review,
+    #home-caretakers,
+    #home-about,
+    .d-flex {
+        align-items: center; /*Veti e flex-it qe shfaq elementet e tij ne qender te ekranit*/
+    }
+    /*zvogelojm madhesine e shkrimit*/
+    .border-box-caretakers {
+        height: 170px;
+        font-size: 12px;
+    }
+
+    /*zvogelojme madhesine e fotos ne sesionin caretakers*/
+    .caretakers-photo {
+        height: 65px;
+    }
+    /*me qene se elementet do vendosen vertikalisht rrisim gjeresine e tyre*/
+    #home-tips div.w-25, /*home-tips esht id e sesionit home,(.)sherben si selektor e klases qe ndodhet ne div(femije e seksionit home)*/
+    #home-about div.w-50,
+    #about-section1 div.w-50,
+    #home-review article.w-30,
+    #adopt-section1 h1.w-50 {
+        width: 70%;
+    }
+
+    #home-tips div.w-30 {
+        width: 50%;
+    }
+
+    #home-caretakers div.w-30 {
+        width: 65%;
+    }
+
+    /*i heqim margin right dhe left seksionit review sepse e kemi pozicionuar ne qender flexin me ane te align-items*/
+    #home-review.mr-12,
+    #home-review.ml-10 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    /*zmadhojme gjeresine dhe ulim lartesine e imazheve ne seksionin review*/
+    .review-photo {
+        width: 30%;
+        height: 40px;
+    }
+
+    /*rrisim padding e elmenteve*/
+    .p-1 {
+        padding: 3%;
+    }
+
+    /*********************************ABOUT***********************************************************/
+    /*Ne faqen about ne seksionin "How it started" do vendosim tekstin perreth imazhit*/
+    #text-wrap {
+        display: block;
+    }
+
+    #text-wrap img {
+        float: left; /*imazhi te qendroje ne te majte pavaresisht vendosjes se tekstit*/
+        max-width: 50%; /*imazhi te mos kaloje kete kufij gjeresie*/
+        margin: 1%; /*te kete largesi nga teksti*/
+    }
+
+    #text-wrap > div.w-50 {
+        width: 100%;
+    }
+
+    /*heqim nje element te flexit qe permbante imazhin*/
+    #about-section3 div.w-30 {
+        display: none;
+    }
+
+    /*me qene se hoqem imazhin ka me shume hapesire per div*/
+    #about-section3 div.w-25 {
+        width: 45%;
+    }
+
+    /*zvogelojm gjersine e imazheve*/
+    #about-section4 div.w-100 {
+        width: 85%;
+    }
+
+    /*zvogelojme fontin dhe rrisim gjeresine e divit qe permban paragrafin ne seksionin "Why we seek your help"*/
+    #about-help {
+        width: 90%;
+        font-size: 11px;
+    }
+
+    /*rrisim largesine nga fillimi i faqes*/
+    #about-section1{
+        margin-top: 25%;
+    }
+
+    /*zvogelojme madhesine e shkrimit te butonave*/
+
+    #about-section4 a {
+        font-size: 5px;
+    }
+
+    /*zvogelojme largesine me anen e majte te ekranit*/
+    #about-section4 div.ml-28{
+        margin-left: 10%;
+    }
+
+
+
+    /*******************************PETS*************************************************************/
+
+    /*avogelojme gjeresine dhe lartesine ne varesi te ekranit*/
+    .carousel-pets-container {
+        width: 446px;
+        height: 426px;
+    }
+
+
+    /*zvogelojme largesine me anen e majte te ekranit*/
+    #pets-section3 a.ml-50{
+        margin-left: 42%;
+    }
+
+    .pets-profile-container {
+        margin-top: 8%;
+    }
+
+    /********************************ADOPT*************************************************************/
+    
+    /*zvogelojme lartesine e imazhit qe te duket me i qarte*/
+    #adopt-section4 img.h-200px {
+        height: 98px;
+    }
+
+    /*zvogelojme largesine me anen e majte te ekranit*/
+    #adopt-section4 div.ml-46 {
+        margin-left: 37%;
+    }
+
+    /*zvogelojme madhesine e shkrimit qe te pershtatet me ekranin*/
+    .font-2-5rem {
+        font-size: 20px;
+    }
+
+    /*rrisim gjeresine e elementeve me qene se flex-i tashme ka drejtim vertikal*/
+    video,
+    #adopt-requirement-table {
+        width: 90%;
+    }
+
+    #adopt-section2 img {
+        width: 36%;
+    }
+
+    #adopt-section4 article.w-20 {
+        width: 60%;
+    }
+    /*******************************TIPS*************************************************************/
+    
+    /*rrisim gjeresine e elementeve pasi flex-i tashme ka drejtim vertikal*/
+    .tip {
+        width: 243px;
+        font-size: 11px;
+        border: 4px solid #88443ae6;
+        height: 140px;
+    }
+
+    .tips-image {
+        width: 30%;
+        height: 115px;
+    }
+
+    /**************************************CONTACT*************************************************/
+    
+    /*zvogelojme gjeresite dhe lartesite e inputeve qe te pershtaten me ekranin*/
+    #message{
+        min-height: 100px;
+        min-width: 333px;
+        max-height: 100px;
+        max-width: 333px;
+    }
+
+    /*zhvendosim imazhin e background-it ne contact.html ne te majte*/
+    div.bg-img-contact {
+        background-position: -715px;
+    }
+
+    /******************************************footer*************************************************/
+
+    /*nga flex-i me kater elemente shtojme flex-wrap dhe rrisim gjeresine qe flex-i te shfaqet ne dy rreshta me nga dy elemente*/
+    footer {
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*leme hapesire midis rreshtave duke perdorur padding-bottom*/
+        footer> div {
+            padding-bottom: 10%;
+        }
+
+    footer div.w-25{
+        width: 40%;
+    }
+
+    /*zvogelojme font*et*/
+    footer h2.font-2-5rem>span,
+    i.fa-solid.fa-paw{
+        font-size: 2rem;
+    }
+
+    i.fa-solid.fa-location-dot,
+    i.fa-solid.fa-phone,
+    i.fa-regular.fa-clock {
+        font-size: 1.7rem;
+    }
+
+    footer span{
+        font-size: 13px;
+    }
+}
+
